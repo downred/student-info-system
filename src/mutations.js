@@ -51,7 +51,11 @@ function addNewStudent(
   let newStudent = {
     index: index,
     full_name: studentFullName,
-    date_of_birth: studentDob,
+    date_of_birth: studentDob.toLocaleDateString("en-US", {
+      month: "2-digit",
+      day: "2-digit",
+      year: "numeric",
+    }),
     municipality: studentMunicipality,
   };
 

@@ -1,14 +1,14 @@
 export default {
   methods: {
-    validate(...propsToValidate) {
-      let nameIsValid = propsToValidate[0] != "";
-      let dobIsValid = propsToValidate[1] != "";
-      let municipalityisValid = propsToValidate[2] != "";
-
-      this.checkName(nameIsValid);
-      this.checkDob(dobIsValid);
-      this.checkMunicipality(municipalityisValid);
-    },
+    // validate(...propsToValidate) {
+    //   let nameIsValid = propsToValidate[0] != "";
+    //   let dobIsValid = propsToValidate[1] != "";
+    //   let municipalityisValid = propsToValidate[2] != "";
+    //
+    //   this.checkName(nameIsValid);
+    //   this.checkDob(dobIsValid);
+    //   this.checkMunicipality(municipalityisValid);
+    // },
 
     checkName(nameIsValid) {
       if (!nameIsValid) {
@@ -34,12 +34,17 @@ export default {
       }
     },
 
-    hideModal(modalId) {
-      this.$nextTick(() => {
-        this.$bvModal.hide(modalId.toString());
-      });
+    // hideModal(modalId) {
+    //   this.$nextTick(() => {
+    //     this.$bvModal.hide(modalId.toString());
+    //   });
+    //
+    //   this.resetState();
+    // },
 
-      this.resetState();
+    closeModal() {
+      this.$emit("close");
+      this.resetForm();
     },
   },
 };

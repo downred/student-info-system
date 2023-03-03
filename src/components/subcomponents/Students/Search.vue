@@ -20,14 +20,12 @@ export default {
 </script>
 
 <template>
-  <b-form-group>
-    <b-icon-search class="search-icon" />
-    <b-form-input
-      v-model="query"
-      class="search-input"
-      :placeholder="placeholder"
-    />
-  </b-form-group>
+  <el-input
+    prefix-icon="el-icon-search"
+    v-model="query"
+    :placeholder="placeholder"
+  >
+  </el-input>
 </template>
 
 <style scoped>
