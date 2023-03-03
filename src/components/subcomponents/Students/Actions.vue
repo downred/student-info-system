@@ -66,9 +66,15 @@ export default {
       <span>{{ confirmDeletionMsg }}</span>
     </b-modal>
 
-    <b-button class="mx-1 p-1" v-if="restoreButton" @click="handleRestore">
-      <b-icon-arrow-counterclockwise />
-    </b-button>
+    <el-button
+      class="mx-1 p-2"
+      v-if="restoreButton"
+      type="info"
+      @click="handleRestore"
+      icon="el-icon-refresh-left"
+    >
+      <!--      <b-icon-arrow-counterclockwise />-->
+    </el-button>
 
     <b-container fluid>
       <EditStudentForm
